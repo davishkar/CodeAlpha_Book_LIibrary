@@ -1,0 +1,705 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root {
+    --bl: #232a37;
+    --primary: #EEBF00;
+    --dark-color: #232a37;
+    --black: #444;
+    --light-color: #666;
+    --border: .1rem solid rgba(0, 0, 0, .1);
+    --border-hover: .1rem solid var(--black);
+    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+* {
+    font-family: 'Work Sans', sans-serif;
+    margin: 10px;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--black);
+}
+
+
+/* General Styles */
+
+.heading {
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.heading::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    height: .1rem;
+    background: rgba(0, 0, 0, .1);
+    z-index: -1;
+}
+
+.heading span {
+    font-size: 3rem;
+    padding: .5rem 2rem;
+    color: var(--black);
+    background: #fff;
+    border: var(--border);
+}
+
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .9rem 3rem;
+    border-radius: .5rem;
+    color: #fff;
+    background: var(--bl);
+    font-size: 1.7rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.btn:hover {
+    background: var(--dark-color);
+}
+
+/* Header Styles */
+
+.header .header-1 {
+    background: rgba(255, 255, 255, 0.1); /* Transparent background */
+    backdrop-filter: blur(10px); /* Glass effect */
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border: var(--border); /* Border to match other sections */
+    flex-wrap: wrap; /* Wrap items for smaller screens */
+}
+
+.header .header-1 .logo {
+    font-family: "Zeyada", cursive;
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: var(--black);
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2); /* Slightly transparent background */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Light border for inputs */
+    border-radius: 5px; /* Rounded corners for inputs */
+    backdrop-filter: blur(5px); /* Glass effect for inputs */
+    padding: 0.5rem 1rem; /* Added padding for better spacing */
+}
+
+.header .header-1 .logo i {
+    color: var(--bl);
+}
+
+.header .header-1 .search-form {
+    width: 100%;
+    max-width: 50rem;
+    height: 5rem;
+    border: var(--border);
+    overflow: hidden;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    border-radius: .5rem;
+    margin-top: 1rem; /* Margin to add spacing */
+}
+
+.header .header-1 .search-form input {
+    font-size: 1.6rem;
+    padding: 0 1.2rem;
+    height: 100%;
+    width: 100%;
+    text-transform: none;
+    color: var(--black);
+    border: none; /* Remove border */
+    outline: none; /* Remove outline */
+}
+
+.header .header-1 .search-form label {
+    font-size: 2.5rem;
+    padding-right: 1.5rem;
+    color: var(--black);
+    cursor: pointer;
+}
+
+.header .header-1 .search-form label:hover {
+    color: var(--bl);
+}
+
+.header .header-1 .icons {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem; /* Margin to add spacing */
+}
+
+.header .header-1 .icons div,
+.header .header-1 .icons a {
+    font-size: 2.5rem;
+    margin-left: 1.5rem;
+    color: var(--black);
+    cursor: pointer;
+}
+
+.header .header-1 .icons div:hover,
+.header .header-1 .icons a:hover {
+    color: var(--bl);
+}
+
+#search-btn {
+    display: none;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+    .header .header-1 {
+        padding: 1rem;
+        flex-direction: column;
+    }
+
+    .header .header-1 .logo {
+        margin-bottom: 1rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .header .header-1 .search-form {
+        width: 100%;
+    }
+
+    .header .header-1 .icons {
+        width: 100%;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+}
+
+
+
+/* Header Styles */
+
+.header .header-2 .navbar {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1); /* Transparent background */
+    backdrop-filter: blur(10px); /* Glass effect */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border: var(--border); /* Border to match other sections */
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center the navbar links */
+    flex-wrap: wrap; /* Wrap the navbar links */
+}
+
+.header .header-2 .navbar a {
+    font-family: "Itim", cursive;
+    display: inline-block;
+    padding: 1.2rem;
+    font-size: 1.7rem;
+    background: rgba(255, 255, 255, 0.2); /* Slightly transparent background */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Light border for inputs */
+    border-radius: 5px; /* Rounded corners for inputs */
+    backdrop-filter: blur(5px); /* Glass effect for inputs */
+    color: var(--black); /* Text color for inputs */
+    margin: 0.5rem; /* Added margin for better spacing */
+}
+
+.header .header-2 .navbar a:hover {
+    background: var(--primary);
+}
+
+.header .header-2.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+/* Bottom Navbar Styles */
+
+.bottom-navbar {
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: none;
+    background: rgba(255, 255, 255, 0.1); /* Transparent background */
+    backdrop-filter: blur(10px); /* Glass effect */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border: var(--border); /* Border to match other sections */
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-around; /* Space out the links */
+    padding: 1rem; /* Padding for spacing */
+}
+
+.bottom-navbar a {
+    font-size: 2.5rem;
+    padding: 1rem; /* Adjusted padding for consistency */
+    background: rgba(255, 255, 255, 0.2); /* Slightly transparent background */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Light border for inputs */
+    border-radius: 5px; /* Rounded corners for inputs */
+    backdrop-filter: blur(5px); /* Glass effect for inputs */
+    color: var(--black); /* Text color for inputs */
+    margin: 0.5rem; /* Added margin for better spacing */
+}
+
+.bottom-navbar a:hover {
+    background: var(--dark-color);
+}
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+    .header .header-2 .navbar {
+        flex-direction: column; /* Stack the navbar links vertically */
+        padding: 1rem;
+    }
+
+    .header .header-2 .navbar a {
+        font-size: 1.5rem; /* Smaller font size for smaller screens */
+        padding: 1rem; /* Adjusted padding for consistency */
+    }
+
+    .bottom-navbar {
+        display: flex; /* Display the bottom navbar on smaller screens */
+    }
+}
+
+
+/* General styles for the home section */
+.home {
+    font-family: "Itim", cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Added padding for better spacing on mobile */
+}
+
+.home .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.home .content {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px); /* Glass effect */
+    padding: 20px; /* Extra padding for better spacing */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: 100%;
+}
+
+/* Styles for the search section */
+.search-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.search-section input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Light border */
+    border-radius: 5px 0 0 5px; /* Rounded corners */
+    backdrop-filter: blur(5px); /* Glass effect */
+    color: var(--black); /* Text color */
+    background: rgba(255, 255, 255, 0.2); /* Slightly transparent background */
+}
+
+.search-section input::placeholder {
+    color: var(--light-color); /* Placeholder color */
+}
+
+.search-section button {
+    padding: 10px;
+    background: rgba(51, 51, 51, 0.7); /* Semi-transparent background */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0; /* Rounded corners */
+    transition: background 0.3s; /* Smooth background transition */
+}
+
+.search-section button:hover {
+    background: rgba(51, 51, 51, 0.9); /* Darker on hover */
+}
+
+/* Styles for the search results section */
+.search-results-section {
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.2); /* Transparent background */
+    backdrop-filter: blur(10px); /* Glass effect */
+    padding: 20px; /* Extra padding for better spacing */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.search-results-section h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: var(--black);
+}
+
+.search-results-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.search-results-section li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: var(--border);
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.search-results-section .book-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-results-section .book-info h3 {
+    font-size: 1.6rem;
+    color: var(--black);
+}
+
+.search-results-section .book-info p {
+    font-size: 1.2rem;
+    color: var(--light-color);
+}
+
+.search-results-section .delete-button {
+    background: var(--bl);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .search-section {
+        flex-direction: column; /* Stack inputs and button vertically */
+        gap: 0; /* Remove gap between elements */
+    }
+
+    .search-section input, .search-section button {
+        border-radius: 5px; /* Uniform border-radius */
+        margin-bottom: 10px; /* Add margin to separate elements */
+    }
+
+    .search-section input {
+        border-radius: 5px; /* Reset border-radius */
+    }
+
+    .search-section button {
+        border-radius: 5px; /* Reset border-radius */
+    }
+
+    .search-results-section li {
+        flex-direction: column; /* Stack book info and button vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .search-results-section .delete-button {
+        margin-top: 10px; /* Add margin to separate from book info */
+    }
+}
+
+
+
+.book-list-section,
+.add-book-section,
+.borrow-history-section {
+    background: url();
+    border-radius: .5rem;
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    border: var(--border);
+    background-size: cover; /* Ensure background covers the entire section */
+}
+
+.book-list-section h2,
+.add-book-section h2,
+.borrow-history-section h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: var(--black);
+}
+
+.book-list-section ul,
+.search-results-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.book-list-section li,
+.search-results-section li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: var(--border);
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.book-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.book-info h3 {
+    font-size: 1.6rem;
+    color: var(--black);
+}
+
+.book-info p {
+    font-size: 1.2rem;
+    color: var(--light-color);
+}
+
+.delete-button {
+    background: var(--bl);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .book-list-section,
+    .add-book-section,
+    .borrow-history-section {
+        padding: 1rem; /* Reduce padding for smaller screens */
+    }
+
+    .book-list-section li,
+    .search-results-section li {
+        flex-direction: column; /* Stack book info and button vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .delete-button {
+        margin-top: 10px; /* Add margin to separate from book info */
+    }
+}
+
+/* Gradient animation for background */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+.add-book-section form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: var(--border);
+}
+
+.add-book-section input,
+.add-book-section button {
+    padding: 10px;
+    background: rgba(161, 146, 146, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+    color: var(--black);
+    flex: 1 1 100%; /* Default to full width */
+    box-sizing: border-box;
+}
+
+.add-book-section input::placeholder {
+    color: var(--light-color);
+}
+
+.add-book-section button {
+    background: rgba(51, 51, 51, 0.7);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.add-book-section button:hover {
+    background: rgba(51, 51, 51, 0.9);
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+    .add-book-section input {
+        flex: 2; /* Inputs take more space */
+    }
+
+    .add-book-section button {
+        flex: 1; /* Button takes less space */
+    }
+}
+
+
+
+.footer .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
+}
+
+.footer .box-container .box h3 {
+    font-size: 2.2rem;
+    color: var(--black);
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a {
+    display: block;
+    font-size: 1.4rem;
+    color: var(--light-color);
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a i {
+    color: var(--bl);
+    padding-right: .5rem;
+}
+
+.footer .box-container .box a:hover i {
+    padding-right: 2rem;
+}
+
+.footer .box-container .box .map {
+    width: 100%;
+}
+
+.footer .credit {
+    padding: 1rem 0;
+    color: var(--light-color);
+    text-align: center;
+    font-size: 1.7rem;
+    box-shadow: 0 3px 6px rgba(52, 31, 97, 0.16), 0 3px 6px rgba(52, 31, 97, 0.23);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: var(--border);
+}
+
+.footer .credit a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.liquid {
+    position: absolute;
+    width: 15rem;
+    height: 15rem;
+    background: linear-gradient(to right, #16d8a7, #2575fc);
+    border-radius: 40%;
+    animation: float 6s infinite ease-in-out;
+    filter: blur(50px);
+}
+
+.liquid:nth-child(1) {
+    top: 10%;
+    left: 15%;
+    animation-duration: 7s;
+    animation-delay: 0s;
+}
+
+.liquid:nth-child(2) {
+    top: 40%;
+    left: 70%;
+    animation-duration: 5s;
+    animation-delay: 2s;
+}
+
+.liquid:nth-child(3) {
+    top: 80%;
+    left: 30%;
+    animation-duration: 8s;
+    animation-delay: 4s;
+}
+
+.liquid:nth-child(4) {
+    top: 60%;
+    left: 80%;
+    animation-duration: 6s;
+    animation-delay: 6s;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) translateX(0) scale(1);
+    }
+
+    50% {
+        transform: translateY(-20px) translateX(20px) scale(1.1);
+    }
+
+    100% {
+        transform: translateY(0) translateX(0) scale(1);
+    }
+}
