@@ -3,7 +3,7 @@
 ## Overview
 I LIBRARY is a web-based application created as part of the CodeAlpha internship program. This application allows users to manage a personal library, including searching for books, adding new books, viewing borrowing history, and more.
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge&logo=livechat)](https://davishkar.github.io//)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge&logo=livechat)](https://davishkar.github.io/CodeAlpha_Book_LIibrary/)
 ## Features
 - **Search Books**: Search for books within the library.
 - **Book List**: View a list of all books in the library.
